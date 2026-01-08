@@ -91,10 +91,13 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="mt-8 p-6 bg-blue-50 rounded-2xl">
-                <h3 className="font-bold text-lg mb-2">🎁 Diagnostic Gratuit</h3>
-                <p className="text-gray-600 text-sm">
-                  Remplissez le formulaire pour bénéficier d'un diagnostic gratuit de votre conformité NIS2 (valeur 500€)
+              <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl border-2 border-blue-200">
+                <h3 className="font-bold text-lg mb-2">💰 Offre de Lancement</h3>
+                <p className="text-gray-600 text-sm mb-2">
+                  <span className="font-bold text-blue-600">Diagnostic Express NIS2 à 79€</span> au lieu de 299€
+                </p>
+                <p className="text-gray-500 text-xs">
+                  ✅ Rapport détaillé sous 48h • ✅ Plan d'action personnalisé • ✅ 30 min de consulting inclus
                 </p>
               </div>
             </motion.div>

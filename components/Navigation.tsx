@@ -12,7 +12,8 @@ export default function Navigation() {
   const navItems = [
     { name: 'Accueil', href: '/' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Ressources', href: '/ressources' },
+    { name: 'eBook', href: '/ebook' },
+    { name: 'Tarifs', href: '/pricing' },
     { name: 'Contact', href: '/contact' },
   ];
 
