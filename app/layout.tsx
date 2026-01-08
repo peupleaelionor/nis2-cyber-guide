@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import UXEnhancements from "@/components/UXEnhancements";
 
 export const metadata: Metadata = {
   title: "NIS2 Cyber Guide | Conformité Cybersécurité PME",
@@ -22,6 +23,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
+        <UXEnhancements />
       </body>
     </html>
   );
