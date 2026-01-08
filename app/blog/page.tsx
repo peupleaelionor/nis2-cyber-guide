@@ -133,13 +133,15 @@ export default function BlogPage() {
           <p className="text-xl mb-8 opacity-90">
             Nos experts sont disponibles pour un diagnostic gratuit
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold text-lg shadow-lg"
-          >
-            Demander un Diagnostic Gratuit
-          </motion.button>
+          <Link href="/contact">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold text-lg shadow-lg"
+            >
+              Demander un Diagnostic Gratuit
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </main>

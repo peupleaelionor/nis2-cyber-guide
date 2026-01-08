@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Shield, CheckCircle, FileText, Users } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
+import DownloadButton from '@/components/DownloadButton';
 
 export default function Home() {
   return (
@@ -48,22 +50,26 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold text-lg shadow-lg hover:bg-blue-700 transition-all flex items-center gap-2"
-              >
-                Télécharger la Checklist Gratuite
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
+              <Link href="/ressources">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="group px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold text-lg shadow-lg hover:bg-blue-700 transition-all flex items-center gap-2"
+                >
+                  Télécharger la Checklist Gratuite
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </motion.button>
+              </Link>
               
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all border-2 border-blue-600"
-              >
-                Demander un Diagnostic
-              </motion.button>
+              <Link href="/contact">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all border-2 border-blue-600"
+                >
+                  Demander un Diagnostic
+                </motion.button>
+              </Link>
             </div>
             
             <motion.div
@@ -196,13 +202,15 @@ export default function Home() {
             <p className="text-xl mb-8 opacity-90">
               Nos experts sont disponibles pour un diagnostic gratuit de votre conformité NIS2
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all"
-            >
-              Demander un Diagnostic Gratuit
-            </motion.button>
+            <Link href="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all"
+              >
+                Demander un Diagnostic Gratuit
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>

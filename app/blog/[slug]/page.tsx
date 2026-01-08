@@ -274,20 +274,24 @@ export default function ArticlePage() {
             Téléchargez notre checklist gratuite ou demandez un diagnostic personnalisé
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold shadow-lg"
-            >
-              Télécharger la Checklist
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold"
-            >
-              Demander un Diagnostic
-            </motion.button>
+            <Link href="/ressources">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold shadow-lg"
+              >
+                Télécharger la Checklist
+              </motion.button>
+            </Link>
+            <Link href="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold"
+              >
+                Demander un Diagnostic
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
       </article>

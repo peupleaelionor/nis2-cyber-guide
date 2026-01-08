@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import { Download, FileText, CheckCircle, Shield, Users, TrendingUp } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
+import DownloadButton from '@/components/DownloadButton';
 
 export default function RessourcesPage() {
   return (
@@ -59,14 +61,7 @@ export default function RessourcesPage() {
                       </li>
                     ))}
                   </ul>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold text-lg shadow-lg"
-                  >
-                    <Download className="w-5 h-5" />
-                    Télécharger Gratuitement
-                  </motion.button>
+                  <DownloadButton variant="secondary" />
                 </div>
                 <div className="relative">
                   <Image
@@ -152,14 +147,19 @@ export default function RessourcesPage() {
                 <h3 className="text-2xl font-bold mb-3">{resource.title}</h3>
                 <p className="text-gray-600 mb-4">{resource.description}</p>
                 <p className="text-sm text-gray-500 mb-6">{resource.type}</p>
-                <motion.button
+                <motion.a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert('Téléchargement de ' + resource.title + ' en cours...');
+                  }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700"
                 >
                   <Download className="w-4 h-4" />
                   Télécharger
-                </motion.button>
+                </motion.a>
               </motion.div>
             ))}
           </div>
@@ -181,13 +181,15 @@ export default function RessourcesPage() {
             <p className="text-xl text-gray-600 mb-8">
               Nos experts peuvent vous aider à atteindre la conformité NIS2 rapidement
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold text-lg shadow-lg hover:bg-blue-700"
-            >
-              Demander un Diagnostic Gratuit
-            </motion.button>
+            <Link href="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold text-lg shadow-lg hover:bg-blue-700"
+              >
+                Demander un Diagnostic Gratuit
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>

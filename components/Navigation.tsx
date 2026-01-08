@@ -43,13 +43,15 @@ export default function Navigation() {
                 {item.name}
               </Link>
             ))}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Télécharger la Checklist
-            </motion.button>
+            <Link href="/ressources">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                Télécharger la Checklist
+              </motion.button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -82,9 +84,11 @@ export default function Navigation() {
                   {item.name}
                 </Link>
               ))}
-              <button className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold">
-                Télécharger la Checklist
-              </button>
+              <Link href="/ressources" onClick={() => setIsOpen(false)}>
+                <button className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold">
+                  Télécharger la Checklist
+                </button>
+              </Link>
             </div>
           </motion.div>
         )}
